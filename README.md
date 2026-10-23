@@ -1,20 +1,16 @@
-# StrataLogic
-Official website and landing platform for StrataLogic — an edge-to-cloud IoT telemetry platform for remote environmental monitoring.
+# strataOS-analytics
+Official website and landing platform for StrataOS Analytics — an edge-to-cloud IoT telemetry platform for remote environmental and asset monitoring.
 
-The Company / Patent Holder: StrataLogic
+The Company / Patent Holder: StrataOS Analytics
 
-  *The Software Core: Strata Core (The proprietary edge-to-cloud telemetry engine, batching algorithms, and cloud dashboard)
+  *The Software Core (Your IP/Patent): Strata Core (The proprietary edge-to-cloud telemetry engine, batching algorithms, and cloud dashboard)
 
 **The Hardware Hardware Enclosures:**
 
-    Strata Terra (Soil Sensor)
-    
-    Strata Hydro (Well Water Sensor)
+    Strata Hydro (Well Monitor)
 
-    Strata Air (Air Quality Sensor)
+    Strata Air (Air Quality Monitor)
 
-    Strata Sonic (Noise Sensor)
+    Strata Sonic (Decibel / Noise Monitor)
 
-    Strata Lumen (Light Sensor)
-
-    Strata Sentinel (Air, Sound, Light)
+    Strata Lumen (Light Monitor)

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>StrataOS Analytics | Environmental & Infrastructure Telemetry</title>
+    <title>StrataLogic | Rugged Land & Water Telemetry</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -12,14 +12,14 @@
             theme: {
                 extend: {
                     colors: {
-                        brandBg: '#0f172a',
-                        brandCard: '#1e293b',
-                        brandCardHover: '#2d3748',
-                        brandTeal: '#0ea5e9',
-                        brandEmerald: '#10b981',
-                        brandText: '#f8fafc',
+                        brandBg: '#0b0f17',       // Deep earth charcoal
+                        brandCard: '#131c2e',     // Rugged matte slate
+                        brandCardHover: '#1d2a44',
+                        brandPrimary: '#22c55e',  // Agrarian Green
+                        brandAccent: '#f59e0b',   // Field Gold / Utility Accent
+                        brandText: '#f1f5f9',
                         brandMuted: '#94a3b8',
-                        brandBorder: '#334155'
+                        brandBorder: '#273548'
                     }
                 }
             }
@@ -32,28 +32,28 @@
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #0f172a;
-            color: #f8fafc;
+            background-color: #0b0f17;
+            color: #f1f5f9;
             scroll-behavior: smooth;
         }
 
         .gradient-text {
-            background: linear-gradient(135deg, #0ea5e9 0%, #10b981 100%);
+            background: linear-gradient(135deg, #22c55e 0%, #10b981 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
         .gradient-border {
-            border-image: linear-gradient(135deg, #0ea5e9, #10b981) 1;
+            border-image: linear-gradient(135deg, #22c55e, #10b981) 1;
         }
 
         .glow-effect {
-            box-shadow: 0 0 25px -5px rgba(14, 165, 233, 0.25);
+            box-shadow: 0 0 25px -5px rgba(34, 197, 94, 0.15);
         }
     </style>
 </head>
 
-<body class="min-h-screen flex flex-col justify-between antialiased selection:bg-sky-500 selection:text-white">
+<body class="min-h-screen flex flex-col justify-between antialiased selection:bg-green-500 selection:text-white">
 
     <!-- Navigation Header -->
     <header class="sticky top-0 z-50 bg-brandBg/90 backdrop-blur-md border-b border-brandBorder">
@@ -61,9 +61,9 @@
             <!-- Brand Logo -->
             <a href="#" class="flex items-center gap-3 group">
                 <div
-                    class="w-10 h-10 rounded-xl bg-gradient-to-tr from-sky-500 to-emerald-400 p-0.5 flex items-center justify-center transition-transform group-hover:scale-105">
+                    class="w-10 h-10 rounded-xl bg-gradient-to-tr from-green-500 to-emerald-400 p-0.5 flex items-center justify-center transition-transform group-hover:scale-105">
                     <div class="w-full h-full bg-brandBg rounded-[10px] flex items-center justify-center">
-                        <svg class="w-5 h-5 text-sky-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg class="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10">
                             </path>
@@ -71,24 +71,23 @@
                     </div>
                 </div>
                 <div>
-                    <span class="text-xl font-bold tracking-tight text-white block leading-none">StrataOS</span>
-                    <span class="text-xs font-medium tracking-widest text-sky-400 uppercase">Analytics</span>
+                    <span class="text-xl font-bold tracking-tight text-white block leading-none">StrataLogic</span>
                 </div>
             </a>
 
             <!-- Nav Links -->
             <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-brandMuted">
-                <a href="#hero" class="hover:text-sky-400 transition-colors">Overview</a>
-                <a href="#products" class="hover:text-sky-400 transition-colors">Products</a>
-                <a href="#architecture" class="hover:text-sky-400 transition-colors">Architecture</a>
-                <a href="#about" class="hover:text-sky-400 transition-colors">Origin Story</a>
+                <a href="#hero" class="hover:text-green-400 transition-colors">Overview</a>
+                <a href="#products" class="hover:text-green-400 transition-colors">Solutions</a>
+                <a href="#architecture" class="hover:text-green-400 transition-colors">Hardware</a>
+                <a href="#about" class="hover:text-green-400 transition-colors">About</a>
             </nav>
 
             <!-- CTA Button -->
             <div class="flex items-center gap-4">
                 <a href="#contact"
-                    class="px-5 py-2.5 rounded-lg bg-gradient-to-r from-sky-500 to-emerald-500 text-white font-medium text-sm hover:opacity-90 transition-opacity shadow-lg shadow-sky-500/20">
-                    Request Demo
+                    class="px-5 py-2.5 rounded-lg bg-gradient-to-r from-green-600 to-emerald-600 text-white font-medium text-sm hover:opacity-90 transition-opacity shadow-lg shadow-green-900/30">
+                    Request Info
                 </a>
             </div>
         </div>
@@ -101,72 +100,65 @@
         <section id="hero" class="relative pt-20 pb-28 overflow-hidden">
             <!-- Background Glows -->
             <div
-                class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-sky-500/10 rounded-full blur-3xl pointer-events-none">
-            </div>
-            <div
-                class="absolute bottom-10 right-10 w-[400px] h-[400px] bg-emerald-500/10 rounded-full blur-3xl pointer-events-none">
+                class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-green-600/10 rounded-full blur-3xl pointer-events-none">
             </div>
 
-            <!-- Updated Hero Label Replacement -->
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 flex flex-col items-center">
-                <img src="images/strataOSanalytics-logo.png" alt="StrataOS Analytics logo"
-                    class="w-120 h-auto mb-8 drop-shadow-[0_0_15px_rgba(14,165,233,0.3)]">
+                <img src="images/StrataLogic-logo-v3.jpg" alt="StrataLogic logo"
+                    class="w-120 h-auto mb-8 drop-shadow-[0_0_15px_rgba(34,197,94,0.2)]">
 
                 <h1
                     class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white mb-6 leading-tight">
                     Data Intelligence for <br class="hidden sm:inline">
-                    <span class="gradient-text">Environmental & Infrastructure</span> Vigilance
+                    <span class="gradient-text">Agriculture Producers</span>
                 </h1>
 
                 <p class="max-w-3xl mx-auto text-base sm:text-xl text-brandMuted mb-10 leading-relaxed">
-                    StrataOS Analytics empowers facility operators, industrial planners, and environmental stewards with
-                    high-frequency field telemetry across hydrology, acoustics, air metrics, and light profiles.
+                    StrataLogic empowers farmers, producers, and landowners with real-time remote sensing across soil, water, sound, air, and light metrics.
                 </p>
 
                 <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
                     <a href="#products"
-                        class="w-full sm:w-auto px-8 py-3.5 rounded-lg bg-sky-500 text-white font-semibold text-sm hover:bg-sky-400 transition-colors shadow-lg shadow-sky-500/25">
-                        Explore Telemetry Suite
+                        class="w-full sm:w-auto px-8 py-3.5 rounded-lg bg-green-600 text-white font-semibold text-sm hover:bg-green-500 transition-colors shadow-lg shadow-green-900/40">
+                        Explore Hardware Suite
                     </a>
-                    <a href="#architecture"
-                        class="w-full sm:w-auto px-8 py-3.5 rounded-lg bg-brandCard border border-brandBorder text-brandText font-semibold text-sm hover:border-sky-500/50 transition-colors">
-                        System Architecture
+                    <a href="#about"
+                        class="w-full sm:w-auto px-8 py-3.5 rounded-lg bg-brandCard border border-brandBorder text-brandText font-semibold text-sm hover:border-green-500/50 transition-colors">
+                        Our Farm-Ready Design
                     </a>
                 </div>
             </div>
         </section>
 
         <!-- Product Showcase Section -->
-        <section id="products" class="py-20 bg-slate-900/50 border-y border-brandBorder/50">
+        <section id="products" class="py-20 bg-slate-900/40 border-y border-brandBorder/50">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
                 <div class="text-center max-w-3xl mx-auto mb-12">
-                    <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-white mb-4">Hardware & Telemetry
-                        Ecosystem</h2>
-                    <p class="text-brandMuted text-base sm:text-lg">Filter and discover our active hardware solutions
-                        and upcoming environmental monitoring nodes.</p>
+                    <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-white mb-4">Field-Proven Telemetry Ecosystem</h2>
+                    <p class="text-brandMuted text-base sm:text-lg">Filter our deployed solutions and upcoming agricultural monitoring nodes.</p>
 
                     <!-- Filter Tabs -->
                     <div
-                        class="flex items-center justify-center gap-2 mt-8 p-1.5 bg-brandCard rounded-xl border border-brandBorder w-fit mx-auto">
+                        class="flex items-center justify-center gap-2 mt-8 p-1.5 bg-brandCard rounded-xl border border-brandBorder w-fit mx-auto flex-wrap">
                         <button onclick="filterProducts('all')" id="btn-all"
-                            class="filter-btn active-tab px-4 py-2 rounded-lg text-xs font-semibold uppercase tracking-wider transition-all bg-sky-500 text-white">All
-                            Products</button>
-                        <button onclick="filterProducts('hydrology')" id="btn-hydrology"
-                            class="filter-btn px-4 py-2 rounded-lg text-xs font-semibold uppercase tracking-wider transition-all text-brandMuted hover:text-white">Hydrology</button>
-                        <button onclick="filterProducts('environmental')" id="btn-environmental"
-                            class="filter-btn px-4 py-2 rounded-lg text-xs font-semibold uppercase tracking-wider transition-all text-brandMuted hover:text-white">Environmental
-                            Vigilance</button>
+                            class="filter-btn active-tab px-4 py-2 rounded-lg text-xs font-semibold uppercase tracking-wider transition-all bg-green-600 text-white">All Solutions</button>
+                        <button onclick="filterProducts('water')" id="btn-water"
+                            class="filter-btn px-4 py-2 rounded-lg text-xs font-semibold uppercase tracking-wider transition-all text-brandMuted hover:text-white">Water & Wells</button>
+                        <button onclick="filterProducts('soil')" id="btn-soil"
+                            class="filter-btn px-4 py-2 rounded-lg text-xs font-semibold uppercase tracking-wider transition-all text-brandMuted hover:text-white">Soil & Crops</button>
+                        <button onclick="filterProducts('perimeter')" id="btn-perimeter"
+                            class="filter-btn px-4 py-2 rounded-lg text-xs font-semibold uppercase tracking-wider transition-all text-brandMuted hover:text-white">Perimeter & Assets</button>
                     </div>
                 </div>
 
                 <!-- FLAGSHIP PRODUCT: Strata Hydro -->
-                <div class="product-item category-hydrology mb-12">
+                <div class="product-item category-water mb-12">
                     <div
-                        class="bg-gradient-to-r from-slate-900 via-brandCard to-slate-900 border border-sky-500/40 rounded-2xl p-8 sm:p-12 relative overflow-hidden glow-effect">
+                        class="bg-gradient-to-r from-slate-900 via-brandCard to-slate-900 border border-green-500/40 rounded-2xl p-8 sm:p-12 relative overflow-hidden glow-effect">
                         <div
-                            class="absolute top-0 right-0 px-4 py-1.5 bg-gradient-to-l from-emerald-500 to-sky-500 text-white text-xs font-bold uppercase tracking-wider rounded-bl-xl shadow-md">
-                            Flagship Product • Active
+                            class="absolute top-0 right-0 px-4 py-1.5 bg-gradient-to-l from-emerald-600 to-green-600 text-white text-xs font-bold uppercase tracking-wider rounded-bl-xl shadow-md">
+                            Flagship Product • Active Deployed
                         </div>
 
                         <div class="grid lg:grid-cols-12 gap-8 items-center">
@@ -175,17 +167,13 @@
                                     <span class="text-3xl">🌊</span>
                                     <h3 class="text-3xl sm:text-4xl font-extrabold text-white">Strata Hydro</h3>
                                 </div>
-                                <p class="text-sky-400 text-sm font-semibold mb-4 uppercase tracking-wider">Precision
-                                    Well & Water Telemetry Platform</p>
+                                <p class="text-green-400 text-sm font-semibold mb-4 uppercase tracking-wider">Precision Well, Tank & Water Telemetry</p>
                                 <p class="text-brandMuted text-base mb-6 leading-relaxed">
-                                    Designed for deep groundwater monitoring, well level verification, and aquatic
-                                    pressure telemetry. Strata Hydro pairs continuous submerged transducer logging with
-                                    high-reliability long-range communication to safeguard water resources against
-                                    industrial drawdowns.
+                                    Engineered specifically for deep groundwater wells, remote stock tanks, and water troughs. Strata Hydro pairs submerged hydrostatic pressure logging with long-range telemetry so you know exact water levels before pumps run dry.
                                 </p>
                                 <ul class="grid sm:grid-cols-2 gap-3 text-sm text-brandText mb-8">
                                     <li class="flex items-center gap-2">
-                                        <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor"
+                                        <svg class="w-4 h-4 text-green-400" fill="none" stroke="currentColor"
                                             viewBox="0 0 24 24">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                                 d="M5 13l4 4L19 7"></path>
@@ -193,33 +181,33 @@
                                         Submersible RS485 Transducer Interface
                                     </li>
                                     <li class="flex items-center gap-2">
-                                        <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor"
+                                        <svg class="w-4 h-4 text-green-400" fill="none" stroke="currentColor"
                                             viewBox="0 0 24 24">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                                 d="M5 13l4 4L19 7"></path>
                                         </svg>
-                                        Native InfluxDB & Grafana Pipeline
+                                        Local Grafana & Cloud Dashboards
                                     </li>
                                     <li class="flex items-center gap-2">
-                                        <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor"
+                                        <svg class="w-4 h-4 text-green-400" fill="none" stroke="currentColor"
                                             viewBox="0 0 24 24">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                                 d="M5 13l4 4L19 7"></path>
                                         </svg>
-                                        Solar-Ready Power Management
+                                        12V Solar & Battery Power Ready
                                     </li>
                                     <li class="flex items-center gap-2">
-                                        <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor"
+                                        <svg class="w-4 h-4 text-green-400" fill="none" stroke="currentColor"
                                             viewBox="0 0 24 24">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                                 d="M5 13l4 4L19 7"></path>
                                         </svg>
-                                        Industrial Weatherproof ASA Enclosure
+                                        Weatherproof ASA Enclosure
                                     </li>
                                 </ul>
                                 <div class="flex items-center gap-4">
                                     <a href="#contact"
-                                        class="px-6 py-3 rounded-lg bg-sky-500 text-white font-medium text-sm hover:bg-sky-400 transition-colors">
+                                        class="px-6 py-3 rounded-lg bg-green-600 text-white font-medium text-sm hover:bg-green-500 transition-colors">
                                         Request Hydro Specs
                                     </a>
                                 </div>
@@ -228,14 +216,14 @@
                             <div
                                 class="lg:col-span-5 bg-slate-950/60 rounded-xl p-6 border border-brandBorder flex flex-col justify-center items-center text-center h-full min-h-[220px]">
                                 <div
-                                    class="w-16 h-16 rounded-full bg-sky-500/10 flex items-center justify-center text-sky-400 mb-3">
+                                    class="w-16 h-16 rounded-full bg-green-500/10 flex items-center justify-center text-green-400 mb-3">
                                     <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
                                             d="M13 10V3L4 14h7v7l9-11h-7z"></path>
                                     </svg>
                                 </div>
-                                <div class="text-2xl font-bold text-white mb-1">Live Telemetry</div>
-                                <div class="text-xs text-brandMuted">99.98% Field Uptime Across Deployments</div>
+                                <div class="text-2xl font-bold text-white mb-1">Continuous Monitoring</div>
+                                <div class="text-xs text-brandMuted">Eliminate Dry Stock Tanks & Pump Failures</div>
                             </div>
                         </div>
                     </div>
@@ -244,108 +232,81 @@
                 <!-- COMING SOON LINEUP -->
                 <div class="mb-6">
                     <h3 class="text-xl font-semibold text-white tracking-tight flex items-center gap-2">
-                        <span>Environmental Vigilance Suite</span>
+                        <span>Upcoming Agricultural Nodes</span>
                         <span
                             class="text-xs px-2.5 py-0.5 rounded-full bg-slate-800 border border-brandBorder text-brandMuted font-normal">In
-                            Active Prototyping</span>
+                            Development</span>
                     </h3>
                 </div>
 
-                <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                    <!-- Strata Terra -->
+                    <div
+                        class="product-item category-soil bg-brandCard border border-brandBorder rounded-xl p-6 flex flex-col justify-between hover:border-green-500/50 transition-all hover:-translate-y-1">
+                        <div>
+                            <div class="flex items-center justify-between mb-4">
+                                <span class="text-2xl">🌱</span>
+                                <span
+                                    class="px-2.5 py-0.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-[10px] font-bold uppercase tracking-wider">
+                                    In Prototyping
+                                </span>
+                            </div>
+                            <h4 class="text-lg font-bold text-white mb-1">Strata Terra</h4>
+                            <p class="text-xs text-green-400 font-medium mb-3">Soil Moisture & Root-Zone Node</p>
+                            <p class="text-brandMuted text-xs leading-relaxed mb-6">
+                                Multi-depth soil moisture, temperature, and electrical conductivity tracking to optimize irrigation across diverse field zones.
+                            </p>
+                        </div>
+                        <div class="border-t border-brandBorder pt-4 text-[11px] text-brandMuted flex justify-between">
+                            <span>Target: Crop & Pasture Zones</span>
+                            <span class="text-green-400">Phase 2</span>
+                        </div>
+                    </div>
 
                     <!-- Strata Sentinel -->
                     <div
-                        class="product-item category-environmental bg-brandCard border border-brandBorder rounded-xl p-6 flex flex-col justify-between hover:border-sky-500/50 transition-all hover:-translate-y-1">
+                        class="product-item category-perimeter bg-brandCard border border-brandBorder rounded-xl p-6 flex flex-col justify-between hover:border-green-500/50 transition-all hover:-translate-y-1">
                         <div>
                             <div class="flex items-center justify-between mb-4">
                                 <span class="text-2xl">🛡️</span>
                                 <span
                                     class="px-2.5 py-0.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-[10px] font-bold uppercase tracking-wider">
-                                    Coming Soon
+                                    In Prototyping
                                 </span>
                             </div>
                             <h4 class="text-lg font-bold text-white mb-1">Strata Sentinel</h4>
-                            <p class="text-xs text-sky-400 font-medium mb-3">Multi-Metric Fence-Line Array</p>
+                            <p class="text-xs text-green-400 font-medium mb-3">Universal Fence-Line Hub</p>
                             <p class="text-brandMuted text-xs leading-relaxed mb-6">
-                                All-in-one industrial boundary monitor measuring ambient noise, light intensity, and air
-                                quality metrics simultaneously.
+                                Rugged T-post mountable universal gateway for monitoring remote gates, equipment yards, and pasture perimeters.
                             </p>
                         </div>
                         <div class="border-t border-brandBorder pt-4 text-[11px] text-brandMuted flex justify-between">
-                            <span>Target: Industrial Borders</span>
-                            <span class="text-emerald-400">Phase 2</span>
+                            <span>Target: Property Boundaries</span>
+                            <span class="text-green-400">Phase 2</span>
                         </div>
                     </div>
 
-                    <!-- Strata Air -->
+                    <!-- Strata Weather -->
                     <div
-                        class="product-item category-environmental bg-brandCard border border-brandBorder rounded-xl p-6 flex flex-col justify-between hover:border-sky-500/50 transition-all hover:-translate-y-1">
+                        class="product-item category-soil bg-brandCard border border-brandBorder rounded-xl p-6 flex flex-col justify-between hover:border-green-500/50 transition-all hover:-translate-y-1">
                         <div>
                             <div class="flex items-center justify-between mb-4">
-                                <span class="text-2xl">💨</span>
+                                <span class="text-2xl">🌦️</span>
                                 <span
                                     class="px-2.5 py-0.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-[10px] font-bold uppercase tracking-wider">
-                                    Coming Soon
+                                    In Prototyping
                                 </span>
                             </div>
-                            <h4 class="text-lg font-bold text-white mb-1">Strata Air</h4>
-                            <p class="text-xs text-sky-400 font-medium mb-3">Air Quality & Gas Monitor</p>
+                            <h4 class="text-lg font-bold text-white mb-1">Strata Weather</h4>
+                            <p class="text-xs text-green-400 font-medium mb-3">Microclimate Weather Station</p>
                             <p class="text-brandMuted text-xs leading-relaxed mb-6">
-                                High-sensitivity particulate (PM2.5/PM10), VOC, and atmospheric gas telemetry designed
-                                for continuous fence-line tracking.
+                                Hyper-local rainfall, wind, temperature, and barometric tracking tailored for individual acreage decision-making.
                             </p>
                         </div>
                         <div class="border-t border-brandBorder pt-4 text-[11px] text-brandMuted flex justify-between">
-                            <span>Target: Emission Zones</span>
-                            <span class="text-emerald-400">Phase 2</span>
-                        </div>
-                    </div>
-
-                    <!-- Strata Sonic -->
-                    <div
-                        class="product-item category-environmental bg-brandCard border border-brandBorder rounded-xl p-6 flex flex-col justify-between hover:border-sky-500/50 transition-all hover:-translate-y-1">
-                        <div>
-                            <div class="flex items-center justify-between mb-4">
-                                <span class="text-2xl">🔊</span>
-                                <span
-                                    class="px-2.5 py-0.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-[10px] font-bold uppercase tracking-wider">
-                                    Coming Soon
-                                </span>
-                            </div>
-                            <h4 class="text-lg font-bold text-white mb-1">Strata Sonic</h4>
-                            <p class="text-xs text-sky-400 font-medium mb-3">Decibel & Noise Monitor</p>
-                            <p class="text-brandMuted text-xs leading-relaxed mb-6">
-                                Precision acoustic signature logging to record, log, and quantify noise pollution and
-                                industrial humming around data centers.
-                            </p>
-                        </div>
-                        <div class="border-t border-brandBorder pt-4 text-[11px] text-brandMuted flex justify-between">
-                            <span>Target: Data Center Perimeter</span>
-                            <span class="text-emerald-400">Phase 2</span>
-                        </div>
-                    </div>
-
-                    <!-- Strata Lumen -->
-                    <div
-                        class="product-item category-environmental bg-brandCard border border-brandBorder rounded-xl p-6 flex flex-col justify-between hover:border-sky-500/50 transition-all hover:-translate-y-1">
-                        <div>
-                            <div class="flex items-center justify-between mb-4">
-                                <span class="text-2xl">☀️</span>
-                                <span
-                                    class="px-2.5 py-0.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-[10px] font-bold uppercase tracking-wider">
-                                    Coming Soon
-                                </span>
-                            </div>
-                            <h4 class="text-lg font-bold text-white mb-1">Strata Lumen</h4>
-                            <p class="text-xs text-sky-400 font-medium mb-3">Ambient Light Telemetry</p>
-                            <p class="text-brandMuted text-xs leading-relaxed mb-6">
-                                Broad-spectrum Lux and glare logging for tracking light spill, night-sky brightness, and
-                                industrial lighting impacts.
-                            </p>
-                        </div>
-                        <div class="border-t border-brandBorder pt-4 text-[11px] text-brandMuted flex justify-between">
-                            <span>Target: Light Spill Audit</span>
-                            <span class="text-emerald-400">Phase 2</span>
+                            <span>Target: Homestead & Fields</span>
+                            <span class="text-green-400">Phase 2</span>
                         </div>
                     </div>
 
@@ -358,44 +319,36 @@
             <div class="grid md:grid-cols-2 gap-12 items-center">
                 <div>
                     <div
-                        class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-sky-500/10 text-sky-400 text-xs font-semibold mb-4">
-                        Origin Story
+                        class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-green-500/10 text-green-400 text-xs font-semibold mb-4">
+                        Built for the Land
                     </div>
                     <h2 class="text-3xl sm:text-4xl font-bold text-white mb-6 leading-tight">
-                        Built for Fence-Line Vigilance & Industrial Accountability
+                        Designed for Real-World Agricultural Demands
                     </h2>
                     <p class="text-brandMuted text-base mb-4 leading-relaxed">
-                        StrataOS Analytics was conceived out of a crucial need: offering communities, landowners, and
-                        facilities verifiable, tamper-resistant data along industrial perimeters. As data centers, power
-                        plants, and heavy infrastructure expand into suburban and rural buffer zones, monitoring
-                        localized environmental impact becomes paramount.
+                        StrataLogic was built out of a practical need: reliable, zero-subscription monitoring tools for rural property, livestock water, and crop management that don't require expensive proprietary service contracts.
                     </p>
                     <p class="text-brandMuted text-base mb-6 leading-relaxed">
-                        By deploying industrial-grade ASA weather-sealed enclosures with custom modular electronics, our
-                        platforms provide uncompromised data integrity—giving stakeholders clear visibility into
-                        hydrology, decibels, air quality, and light spill.
+                        By utilizing weather-sealed ASA enclosures and open telemetry standards like MQTT and Grafana, our hardware gives you absolute ownership and visibility over your land's critical data.
                     </p>
                 </div>
 
                 <div class="bg-brandCard border border-brandBorder rounded-2xl p-8">
                     <h3 class="text-xl font-bold text-white mb-4 flex items-center gap-2">
-                        <span class="text-emerald-400">⚡</span> Core Platform Architecture
+                        <span class="text-green-400">⚙️</span> The StrataLogic Standard
                     </h3>
                     <div class="space-y-4 text-sm text-brandMuted">
                         <div class="p-4 bg-slate-900/60 rounded-lg border border-brandBorder/60">
-                            <h4 class="font-semibold text-white mb-1">Custom ASA Hardware Enclosures</h4>
-                            <p class="text-xs">UV-resistant, weather-sealed, bolt-free exterior designs built for years
-                                of outdoor exposure.</p>
+                            <h4 class="font-semibold text-white mb-1">Rugged Outdoor Hardware</h4>
+                            <p class="text-xs">UV-resistant ASA enclosures built to withstand intense sun, wind, and freezing field conditions.</p>
                         </div>
                         <div class="p-4 bg-slate-900/60 rounded-lg border border-brandBorder/60">
-                            <h4 class="font-semibold text-white mb-1">Open Telemetry Standards</h4>
-                            <p class="text-xs">Seamless export to InfluxDB, MQTT, or Grafana dashboards without
-                                proprietary lock-in.</p>
+                            <h4 class="font-semibold text-white mb-1">Zero Monthly Subscriptions</h4>
+                            <p class="text-xs">Self-hosted or local-first archiving combined with direct data pipelines. No recurring cloud software ransom.</p>
                         </div>
                         <div class="p-4 bg-slate-900/60 rounded-lg border border-brandBorder/60">
-                            <h4 class="font-semibold text-white mb-1">Edge Sensor Processing</h4>
-                            <p class="text-xs">Local signal filtering and onboard validation ensure accurate, low-noise
-                                field measurements.</p>
+                            <h4 class="font-semibold text-white mb-1">Field-Tested Reliability</h4>
+                            <p class="text-xs">Designed by operators who understand what it takes to keep remote equipment running on acreage.</p>
                         </div>
                     </div>
                 </div>
@@ -405,16 +358,15 @@
         <!-- Contact / CTA Section -->
         <section id="contact" class="py-16 bg-slate-900/80 border-t border-brandBorder">
             <div class="max-w-4xl mx-auto px-4 text-center">
-                <h2 class="text-3xl font-bold text-white mb-4">Ready to Deploy Field Vigilance?</h2>
-                <p class="text-brandMuted mb-8 text-sm sm:text-base">Get in touch to discuss pilot programs, custom
-                    hardware enclosures, or integration options for Strata Hydro.</p>
+                <h2 class="text-3xl font-bold text-white mb-4">Ready to Gain Complete Visibility Across Your Land?</h2>
+                <p class="text-brandMuted mb-8 text-sm sm:text-base">Reach out to discuss pilot deployments, custom hardware configurations, or Strata Hydro specs.</p>
                 <form class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto"
                     onsubmit="event.preventDefault(); alert('Thank you for reaching out! We will contact you shortly.');">
-                    <input type="email" placeholder="Enter your work email" required
-                        class="flex-grow px-4 py-3 rounded-lg bg-brandCard border border-brandBorder text-white text-sm focus:outline-none focus:border-sky-500">
+                    <input type="email" placeholder="Enter your email address" required
+                        class="flex-grow px-4 py-3 rounded-lg bg-brandCard border border-brandBorder text-white text-sm focus:outline-none focus:border-green-500">
                     <button type="submit"
-                        class="px-6 py-3 rounded-lg bg-sky-500 text-white font-medium text-sm hover:bg-sky-400 transition-colors shadow-lg shadow-sky-500/20 whitespace-nowrap">
-                        Get Started
+                        class="px-6 py-3 rounded-lg bg-green-600 text-white font-medium text-sm hover:bg-green-500 transition-colors shadow-lg shadow-green-900/30 whitespace-nowrap">
+                        Get in Touch
                     </button>
                 </form>
             </div>
@@ -427,12 +379,12 @@
         <div
             class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-brandMuted">
             <div>
-                © 2026 StrataOS Analytics. All rights reserved.
+                © 2026 StrataLogic. All rights reserved.
             </div>
             <div class="flex gap-6">
                 <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
                 <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
-                <a href="#" class="hover:text-white transition-colors">Telemetry Documentation</a>
+                <a href="#" class="hover:text-white transition-colors">Documentation</a>
             </div>
         </div>
     </footer>
@@ -445,14 +397,14 @@
 
             // Reset active button state
             buttons.forEach(btn => {
-                btn.classList.remove('bg-sky-500', 'text-white');
+                btn.classList.remove('bg-green-600', 'text-white');
                 btn.classList.add('text-brandMuted');
             });
 
             // Set current active button
             const activeBtn = document.getElementById('btn-' + category);
             if (activeBtn) {
-                activeBtn.classList.add('bg-sky-500', 'text-white');
+                activeBtn.classList.add('bg-green-600', 'text-white');
                 activeBtn.classList.remove('text-brandMuted');
             }
 

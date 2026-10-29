@@ -1,5 +1,5 @@
 # StrataLogic
-Official website and landing platform for StrataLogic — an edge-to-cloud IoT telemetry platform for remote environmental monitoring.
+Official website for StrataLogic — an edge-to-cloud IoT telemetry platform for remote agricultural and property monitoring.
 
 The Company / Patent Holder: StrataLogic
 

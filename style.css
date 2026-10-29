@@ -1,0 +1,17 @@
+body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0f172a;
+            color: #f8fafc;
+            scroll-behavior: smooth;
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #0ea5e9 0%, #10b981 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .gradient-border {
+            border-image: linear-gradient(135deg, #0ea5e9, #10b981) 1;
+        }
+        .glow-effect {
+            box-shadow: 0 0 25px -5px rgba(14, 165, 233, 0.25);
+        }

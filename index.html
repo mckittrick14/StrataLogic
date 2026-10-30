@@ -25,32 +25,11 @@
             }
         }
     </script>
+    <link rel="stylesheet" href="style.css">
     <!-- Google Font Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #0b0f17;
-            color: #f1f5f9;
-            scroll-behavior: smooth;
-        }
-
-        .gradient-text {
-            background: linear-gradient(135deg, #22c55e 0%, #10b981 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .gradient-border {
-            border-image: linear-gradient(135deg, #22c55e, #10b981) 1;
-        }
-
-        .glow-effect {
-            box-shadow: 0 0 25px -5px rgba(34, 197, 94, 0.15);
-        }
-    </style>
 </head>
 
 <body class="min-h-screen flex flex-col justify-between antialiased selection:bg-green-500 selection:text-white">
@@ -63,11 +42,13 @@
                 <div
                     class="w-10 h-10 rounded-xl bg-gradient-to-tr from-green-500 to-emerald-400 p-0.5 flex items-center justify-center transition-transform group-hover:scale-105">
                     <div class="w-full h-full bg-brandBg rounded-[10px] flex items-center justify-center">
-                        <svg class="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10">
-                            </path>
-                        </svg>
+                        <div
+                            class="w-10 h-10 rounded-xl bg-gradient-to-tr from-green-500 to-emerald-400 p-0.5 flex items-center justify-center transition-transform group-hover:scale-105">
+                            <div class="w-full h-full bg-brandBg rounded-[10px] flex items-center justify-center">
+                                <img src="images/StrataLogic-logo-mini2.png" alt="StrataLogic Logo"
+                                    class="w-10 h-10 object-contain">
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div>
@@ -99,22 +80,29 @@
         <!-- Hero Section -->
         <section id="hero" class="relative pt-20 pb-28 overflow-hidden">
             <!-- Background Glows -->
-            <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-sky-500/10 rounded-full blur-3xl pointer-events-none"></div>
-            <div class="absolute bottom-10 right-10 w-[400px] h-[400px] bg-emerald-500/10 rounded-full blur-3xl pointer-events-none"></div>
+            <div
+                class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-sky-500/10 rounded-full blur-3xl pointer-events-none">
+            </div>
+            <div
+                class="absolute bottom-10 right-10 w-[400px] h-[400px] bg-emerald-500/10 rounded-full blur-3xl pointer-events-none">
+            </div>
 
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-                <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-800/80 border border-brandBorder text-xs font-medium text-sky-400 mb-8 backdrop-blur-md">
+                <div
+                    class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-800/80 border border-brandBorder text-xs font-medium text-sky-400 mb-8 backdrop-blur-md">
                     <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
                     Modular Industrial Telemetry Engine
                 </div>
-                
-                <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white mb-6 leading-tight">
+
+                <h1
+                    class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white mb-6 leading-tight">
                     Data Intelligence for <br class="hidden sm:inline">
                     <span class="gradient-text">Agriculture Producers</span>
                 </h1>
 
                 <p class="max-w-3xl mx-auto text-base sm:text-xl text-brandMuted mb-10 leading-relaxed">
-                    StrataLogic empowers farmers, producers, and landowners with real-time remote sensing across soil, water, sound, air, and light metrics.
+                    StrataLogic empowers farmers, producers, and landowners with real-time remote sensing across soil,
+                    water, sound, air, and light metrics.
                 </p>
 
                 <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -135,20 +123,26 @@
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
                 <div class="text-center max-w-3xl mx-auto mb-12">
-                    <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-white mb-4">Field-Proven Telemetry Ecosystem</h2>
-                    <p class="text-brandMuted text-base sm:text-lg">Filter our deployed solutions and upcoming agricultural monitoring nodes.</p>
+                    <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-white mb-4">Field-Proven Telemetry
+                        Ecosystem</h2>
+                    <p class="text-brandMuted text-base sm:text-lg">Filter our deployed solutions and upcoming
+                        agricultural monitoring nodes.</p>
 
                     <!-- Filter Tabs -->
                     <div
                         class="flex items-center justify-center gap-2 mt-8 p-1.5 bg-brandCard rounded-xl border border-brandBorder w-fit mx-auto flex-wrap">
                         <button onclick="filterProducts('all')" id="btn-all"
-                            class="filter-btn active-tab px-4 py-2 rounded-lg text-xs font-semibold uppercase tracking-wider transition-all bg-green-600 text-white">All Solutions</button>
+                            class="filter-btn active-tab px-4 py-2 rounded-lg text-xs font-semibold uppercase tracking-wider transition-all bg-green-600 text-white">All
+                            Solutions</button>
                         <button onclick="filterProducts('water')" id="btn-water"
-                            class="filter-btn px-4 py-2 rounded-lg text-xs font-semibold uppercase tracking-wider transition-all text-brandMuted hover:text-white">Water & Wells</button>
+                            class="filter-btn px-4 py-2 rounded-lg text-xs font-semibold uppercase tracking-wider transition-all text-brandMuted hover:text-white">Water
+                            & Wells</button>
                         <button onclick="filterProducts('soil')" id="btn-soil"
-                            class="filter-btn px-4 py-2 rounded-lg text-xs font-semibold uppercase tracking-wider transition-all text-brandMuted hover:text-white">Soil & Crops</button>
+                            class="filter-btn px-4 py-2 rounded-lg text-xs font-semibold uppercase tracking-wider transition-all text-brandMuted hover:text-white">Soil
+                            & Crops</button>
                         <button onclick="filterProducts('perimeter')" id="btn-perimeter"
-                            class="filter-btn px-4 py-2 rounded-lg text-xs font-semibold uppercase tracking-wider transition-all text-brandMuted hover:text-white">Perimeter & Assets</button>
+                            class="filter-btn px-4 py-2 rounded-lg text-xs font-semibold uppercase tracking-wider transition-all text-brandMuted hover:text-white">Perimeter
+                            & Assets</button>
                     </div>
                 </div>
 
@@ -167,9 +161,12 @@
                                     <span class="text-3xl">🌊</span>
                                     <h3 class="text-3xl sm:text-4xl font-extrabold text-white">Strata Hydro</h3>
                                 </div>
-                                <p class="text-green-400 text-sm font-semibold mb-4 uppercase tracking-wider">Precision Well, Tank & Water Telemetry</p>
+                                <p class="text-green-400 text-sm font-semibold mb-4 uppercase tracking-wider">Precision
+                                    Well, Tank & Water Telemetry</p>
                                 <p class="text-brandMuted text-base mb-6 leading-relaxed">
-                                    Engineered specifically for deep groundwater wells, remote stock tanks, and water troughs. Strata Hydro pairs submerged hydrostatic pressure logging with long-range telemetry so you know exact water levels before pumps run dry.
+                                    Engineered specifically for deep groundwater wells, remote stock tanks, and water
+                                    troughs. Strata Hydro pairs submerged hydrostatic pressure logging with long-range
+                                    telemetry so you know exact water levels before pumps run dry.
                                 </p>
                                 <ul class="grid sm:grid-cols-2 gap-3 text-sm text-brandText mb-8">
                                     <li class="flex items-center gap-2">
@@ -255,7 +252,8 @@
                             <h4 class="text-lg font-bold text-white mb-1">Strata Terra</h4>
                             <p class="text-xs text-green-400 font-medium mb-3">Soil Moisture & Root-Zone Node</p>
                             <p class="text-brandMuted text-xs leading-relaxed mb-6">
-                                Multi-depth soil moisture, temperature, and electrical conductivity tracking to optimize irrigation across diverse field zones.
+                                Multi-depth soil moisture, temperature, and electrical conductivity tracking to optimize
+                                irrigation across diverse field zones.
                             </p>
                         </div>
                         <div class="border-t border-brandBorder pt-4 text-[11px] text-brandMuted flex justify-between">
@@ -278,7 +276,8 @@
                             <h4 class="text-lg font-bold text-white mb-1">Strata Sentinel</h4>
                             <p class="text-xs text-green-400 font-medium mb-3">Universal Fence-Line Hub</p>
                             <p class="text-brandMuted text-xs leading-relaxed mb-6">
-                                Rugged T-post mountable universal gateway for monitoring remote gates, equipment yards, and pasture perimeters.
+                                Rugged T-post mountable universal gateway for monitoring remote gates, equipment yards,
+                                and pasture perimeters.
                             </p>
                         </div>
                         <div class="border-t border-brandBorder pt-4 text-[11px] text-brandMuted flex justify-between">
@@ -301,7 +300,8 @@
                             <h4 class="text-lg font-bold text-white mb-1">Strata Weather</h4>
                             <p class="text-xs text-green-400 font-medium mb-3">Microclimate Weather Station</p>
                             <p class="text-brandMuted text-xs leading-relaxed mb-6">
-                                Hyper-local rainfall, wind, temperature, and barometric tracking tailored for individual acreage decision-making.
+                                Hyper-local rainfall, wind, temperature, and barometric tracking tailored for individual
+                                acreage decision-making.
                             </p>
                         </div>
                         <div class="border-t border-brandBorder pt-4 text-[11px] text-brandMuted flex justify-between">
@@ -326,10 +326,13 @@
                         Designed for Real-World Agricultural Demands
                     </h2>
                     <p class="text-brandMuted text-base mb-4 leading-relaxed">
-                        StrataLogic was built out of a practical need: reliable, zero-subscription monitoring tools for rural property, livestock water, and crop management that don't require expensive proprietary service contracts.
+                        StrataLogic was built out of a practical need: reliable, zero-subscription monitoring tools for
+                        rural property, livestock water, and crop management that don't require expensive proprietary
+                        service contracts.
                     </p>
                     <p class="text-brandMuted text-base mb-6 leading-relaxed">
-                        By utilizing weather-sealed ASA enclosures and open telemetry standards like MQTT and Grafana, our hardware gives you absolute ownership and visibility over your land's critical data.
+                        By utilizing weather-sealed ASA enclosures and open telemetry standards like MQTT and Grafana,
+                        our hardware gives you absolute ownership and visibility over your land's critical data.
                     </p>
                 </div>
 
@@ -340,15 +343,18 @@
                     <div class="space-y-4 text-sm text-brandMuted">
                         <div class="p-4 bg-slate-900/60 rounded-lg border border-brandBorder/60">
                             <h4 class="font-semibold text-white mb-1">Rugged Outdoor Hardware</h4>
-                            <p class="text-xs">UV-resistant ASA enclosures built to withstand intense sun, wind, and freezing field conditions.</p>
+                            <p class="text-xs">UV-resistant ASA enclosures built to withstand intense sun, wind, and
+                                freezing field conditions.</p>
                         </div>
                         <div class="p-4 bg-slate-900/60 rounded-lg border border-brandBorder/60">
                             <h4 class="font-semibold text-white mb-1">Zero Monthly Subscriptions</h4>
-                            <p class="text-xs">Self-hosted or local-first archiving combined with direct data pipelines. No recurring cloud software ransom.</p>
+                            <p class="text-xs">Self-hosted or local-first archiving combined with direct data pipelines.
+                                No recurring cloud software ransom.</p>
                         </div>
                         <div class="p-4 bg-slate-900/60 rounded-lg border border-brandBorder/60">
                             <h4 class="font-semibold text-white mb-1">Field-Tested Reliability</h4>
-                            <p class="text-xs">Designed by operators who understand what it takes to keep remote equipment running on acreage.</p>
+                            <p class="text-xs">Designed by operators who understand what it takes to keep remote
+                                equipment running on acreage.</p>
                         </div>
                     </div>
                 </div>
@@ -359,7 +365,8 @@
         <section id="contact" class="py-16 bg-slate-900/80 border-t border-brandBorder">
             <div class="max-w-4xl mx-auto px-4 text-center">
                 <h2 class="text-3xl font-bold text-white mb-4">Ready to Gain Complete Visibility Across Your Land?</h2>
-                <p class="text-brandMuted mb-8 text-sm sm:text-base">Reach out to discuss pilot deployments, custom hardware configurations, or Strata Hydro specs.</p>
+                <p class="text-brandMuted mb-8 text-sm sm:text-base">Reach out to discuss pilot deployments, custom
+                    hardware configurations, or Strata Hydro specs.</p>
                 <form class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto"
                     onsubmit="event.preventDefault(); alert('Thank you for reaching out! We will contact you shortly.');">
                     <input type="email" placeholder="Enter your email address" required

@@ -16,3 +16,5 @@ The Company / Patent Holder: StrataLogic
     Strata Lumen (Light Sensor)
 
     Strata Sentinel (Air, Sound, Light)
+
+    Strata Pulse (Electric Fence Sensor)
